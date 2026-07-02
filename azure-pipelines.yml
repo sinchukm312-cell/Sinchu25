@@ -2,13 +2,15 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: ubuntu-latest
 
 steps:
-- script: echo "Hello, DevOps! Build started"
-  displayName: 'Run a one-line script'
+- script: echo "Pipeline is running successfully 🚀"
+  displayName: 'Run a simple test'
 
 - script: |
-    pip install -r requirements.txt
-    python app.py
-  displayName: 'Run Flask App'
+    echo "Checking system info..."
+    uname -a
+    echo "Listing files..."
+    ls -la
+  displayName: 'System Info'
